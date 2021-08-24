@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: bebas_neue;
+    src: url("../fonts/bebas_neue/BebasNeue-Regular.ttf"),
+        url("../fonts/bebas_neue/BebasNeue-Regular.woff");
+
+}
+@font-face {
+    font-family: Raleway;
+    src: url("../fonts/Raleway/Raleway-VariableFont_wght.ttf");
+}
+
+body {
+    height: 100vh;
+    background-color: #223538;
+    font-family: Raleway, sans-serif;
+    /* background-image: url("../images/DogsA3_Remington.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size:100%; */
+}
+
+.wrapper {
+    width: 40%;
+    min-width: 590px;
+    position: absolute;
+    /* transform: translate moves an element
+    using the x-y coordinate in this case a -50%
+    moves it to the left and a -50% moves to the
+    bottom*/
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%
+}
+
+.container {
+    width: 100%;
+    padding: 30px 30px 50px;
+    background-color: rgb(255,255,255, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+}
+
+
+.container * {
+    color: #000;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: bebas_neue;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+@media (max-width: 1480px) {
+    
+}
+
+@media (max-width: 650px) {
+
+    .wrapper {
+        width: 80%;
+        min-width: 300px;
+    }
+}
+
+
+
+
+.details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* i'm falling for this justify-content
+    because it adds even spacing between child-elements*/
+    margin-bottom: 10px;
+}
+
+.bar {
+    position: relative;
+    border: 2px solid rgb(73, 39, 35, .7);
+    border-radius: 20px;
+}
+
+.bar div {
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 20px;
+    background-color: rgb(73, 39, 35, .7);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.skills:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+#html-bar{
+    animation: html-fill 2s forwards;
+}
+
+@keyframes html-fill {
+    100%{
+        width: 90%
+    }
+}
+
+#css-bar {
+    animation: css-fill 2s forwards
+}
+
+@keyframes css-fill {
+    100% {
+        width: 75%
+    }    
+}
+
+
+#javascript-bar {
+    animation: javascript-fill 2s forwards;
+}
+
+@keyframes javascript-fill {
+    100% {
+        width: 65%
+    }
+}
+
+
+#python-bar {
+    animation: python-fill 2s forwards;
+}
+
+@keyframes python-fill {
+    100% {
+        width: 68%;
+    }
+    
+}
